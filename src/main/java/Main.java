@@ -13,7 +13,7 @@ public class Main {
     //App config
     public static void run(){
         sort(new Integer[] { 1, 2, 3, 4, 5 ,7,8,10,9});
-        sort(new Integer[] { 3, 1, 5, 4, 2 });
+        sort(new Integer[] { 3, 1, 5, 4, 2, -1,-2 });
         sort(new Integer[] { 5, 4, 3, 2, 1 });
     }
 
