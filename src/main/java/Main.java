@@ -1,26 +1,23 @@
-import algorithms.bubbleSort.BubbleSort;
-import algorithms.bubbleSort.Sortable;
+import oldMethodsNotIncludedOnGit.BubbleSort;
+import algorithms.bubbleSort.BubbleSortAlgorithm;
+import oldMethodsNotIncludedOnGit.Sortable;
 
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Buuble sort");
         run();
     }
 
-    //App config
-    public static void run(){
-        sort(new Integer[] { 1, 2, 3, 4, 5 ,7,8,10,9});
-        sort(new Integer[] { 3, 1, 5, 4, 2, -1,-2 });
-        sort(new Integer[] { 5, 4, 3, 2, 1 });
+
+    public static void run() {
+        int[] arrayToSort = {-1, 4, -3, 2, 51};
+        System.out.println(Arrays.toString(arrayToSort));
+        BubbleSortAlgorithm buubleSortObjecct = new BubbleSortAlgorithm();
+        System.out.println(Arrays.toString(buubleSortObjecct.bubbleSortMethodAscending(arrayToSort)));
+        System.out.println("Now Descending");
+        System.out.println(Arrays.toString(buubleSortObjecct.bubbleSortMethodDescending(arrayToSort)));
     }
 
-    private static <T extends Comparable<T>> void sort(T[] values){
-        Sortable sorter = new BubbleSort();
-        sorter.sortAscending(values);
-        sorter.sortDescending(values);
-        System.out.println(Arrays.toString(values));
-    }
 }
