@@ -13,6 +13,7 @@ public class BubbleSortAlgorithm {
 
     public int[] bubbleSortMethodAscending(int[] arrayToSort) {
 
+        checkIfArrayToSortIsNullAndThrowIllegalArgumentEpception(arrayToSort);
         int lengthOfArray = arrayToSort.length;
 
         for (int x = 0; x < lengthOfArray - 1; x++) {
@@ -27,6 +28,7 @@ public class BubbleSortAlgorithm {
 
     public int[] bubbleSortMethodDescending(int[] arrayToSort) {
 
+        checkIfArrayToSortIsNullAndThrowIllegalArgumentEpception(arrayToSort);
         int lengthOfArray = arrayToSort.length;
 
         for (int x = 0; x < lengthOfArray - 1; x++) {
@@ -39,11 +41,16 @@ public class BubbleSortAlgorithm {
         return arrayToSort;
     }
 
-
     private static void swap(int[] arrayToHandle, int first, int second) {
         int tempValue = arrayToHandle[first];
         arrayToHandle[first] = arrayToHandle[second];
         arrayToHandle[second] = tempValue;
+    }
+
+    private void checkIfArrayToSortIsNullAndThrowIllegalArgumentEpception(int[] arrayToSort) {
+        if (arrayToSort == null) {
+            throw new IllegalArgumentException("Illegal Argument Exception - Array is null!");
+        }
     }
 }
 
